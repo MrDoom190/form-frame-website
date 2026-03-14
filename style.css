@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+
+    height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+}
+
+
+.container {
+
+    display: flex;
+
+    width: 90%;
+
+    height: 90vh;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+
+}
+
+
+.form-panel {
+
+    width: 40%;
+
+    padding: 50px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(15px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.form-panel h1 {
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.form-panel p {
+
+    opacity: 0.7;
+
+    margin-bottom: 30px;
+
+}
+
+
+form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
+input,
+select,
+textarea {
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    color: white;
+
+    font-size: 14px;
+
+    outline: none;
+
+}
+
+
+textarea {
+
+    height: 100px;
+
+    resize: none;
+
+}
+
+
+button {
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: linear-gradient(90deg, #ff7a18, #ff3d77);
+
+    color: white;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+button:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+.frame-panel {
+
+    width: 60%;
+
+    background: black;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.frame-header {
+
+    padding: 15px;
+
+    background: #111;
+
+    font-weight: 500;
+
+    border-bottom: 1px solid #333;
+
+}
+
+
+iframe {
+
+    flex: 1;
+
+    border: none;
+
+}

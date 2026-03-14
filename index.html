@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Form & Frame | AI Video & Animation Agency</title>
+
+    <meta name="description"
+        content="Form & Frame helps brands grow using AI videos, animations and storytelling-driven marketing content.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* GLOBAL */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Inter;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        section {
+            padding: 100px 8%;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #bbb;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        .hero-content h1 {
+            font-size: 5rem;
+            font-weight: 700;
+            letter-spacing: -2px;
+        }
+
+        .hero-content p {
+            margin-top: 15px;
+            color: #ccc;
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: white;
+            color: black;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+
+        /* SERVICES */
+
+        .services {
+            background: #0b0b0b;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 60px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service {
+            background: #151515;
+            padding: 35px;
+            border-radius: 14px;
+            border: 1px solid #222;
+            transition: .3s;
+        }
+
+        .service:hover {
+            transform: translateY(-10px);
+        }
+
+        .service h3 {
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            color: #bbb;
+            margin-bottom: 10px;
+        }
+
+        .service ul {
+            padding-left: 15px;
+            color: #aaa;
+        }
+
+        .service li {
+            margin-bottom: 6px;
+        }
+
+
+        /* PORTFOLIO */
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .project video {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .project span {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+
+        /* TESTIMONIALS */
+
+        .testimonials {
+            background: #0a0a0a;
+            text-align: center;
+        }
+
+        .testimonial {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+            color: #bbb;
+        }
+
+        .testimonial strong {
+            display: block;
+            margin-top: 10px;
+            color: white;
+        }
+
+
+        /* CONTACT */
+
+        .contact form {
+            max-width: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input,
+        textarea {
+            padding: 15px;
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: white;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: white;
+        }
+
+        button {
+            padding: 15px;
+            background: white;
+            color: black;
+            border: none;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid #222;
+            color: #777;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px) {
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <nav>
+
+        <div class="logo">Form & Frame</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <video autoplay muted loop>
+            <source src="hero-video.mp4">
+        </video>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <h1>Form & Frame</h1>
+
+            <p>AI VIDEO • ANIMATION • STORYTELLING</p>
+
+            <a href="#contact" class="btn">Start Your Project</a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SERVICES -->
+
+    <section class="services" id="services">
+
+        <h2 class="section-title">Creative Video Solutions That Drive Results</h2>
+
+        <div class="service-grid">
+
+
+            <div class="service">
+
+                <h3>AI Video Creation</h3>
+
+                <p>Create high-converting promotional videos using advanced AI production tools.</p>
+
+                <ul>
+
+                    <li>AI generated product ads</li>
+
+                    <li>Social media campaign videos</li>
+
+                    <li>Brand storytelling content</li>
+
+                    <li>Short-form viral video production</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="service">
+
+                <h3>Animation & Explainer Videos</h3>
+
+                <p>Turn complex ideas into clear, engaging animated stories that drive conversions.</p>
+
+                <ul>
+
+                    <li>Startup explainer videos</li>
+
+                    <li>SaaS product walkthroughs</li>
+
+                    <li>Educational animation</li>
+
+                    <li>Brand narrative videos</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="service">
+
+                <h3>Motion Graphics & Social Media Content</h3>
+
+                <p>Eye-catching visuals designed to boost engagement and visibility.</p>
+
+                <ul>
+
+                    <li>Instagram reels editing</li>
+
+                    <li>Motion graphic ads</li>
+
+                    <li>Brand promotional visuals</li>
+
+                    <li>Short marketing videos</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PORTFOLIO -->
+
+    <section id="work">
+
+        <h2 class="section-title">Selected Work</h2>
+
+        <div class="portfolio-grid">
+
+            <div class="project">
+
+                <video muted loop>
+                    <source src="work1.mp4">
+                </video>
+
+                <span>AI Product Ad</span>
+
+            </div>
+
+            <div class="project">
+
+                <video muted loop>
+                    <source src="work2.mp4">
+                </video>
+
+                <span>Explainer Animation</span>
+
+            </div>
+
+            <div class="project">
+
+                <video muted loop>
+                    <source src="work3.mp4">
+                </video>
+
+                <span>Brand Reel</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- TESTIMONIAL -->
+
+    <section class="testimonials">
+
+        <div class="testimonial">
+
+            <p>
+                "Form & Frame helped us transform our marketing content into powerful storytelling videos.
+                Our engagement increased significantly within weeks."
+            </p>
+
+            <strong>Marketing Director • Startup Client</strong>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <h2 class="section-title">Start Your Project</h2>
+
+        <form action="https://formsubmit.co/formandframe26@gmail.com" method="POST">
+
+            <input type="text" name="name" placeholder="Name" required>
+
+            <input type="email" name="email" placeholder="Email" required>
+
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+
+            <textarea name="message" rows="5" placeholder="Tell us about your project"></textarea>
+
+            <input type="hidden" name="_captcha" value="false">
+
+            <input type="hidden" name="_subject" value="New Client Inquiry - Form & Frame">
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+    </section>
+
+
+
+    <footer>
+
+        <p>© 2026 Form & Frame Creative Studio</p>
+
+    </footer>
+
+
+
+    <script>
+
+        document.querySelectorAll(".project video").forEach(v => {
+
+            v.addEventListener("mouseenter", () => v.play())
+
+            v.addEventListener("mouseleave", () => v.pause())
+
+        })
+
+    </script>
+
+</body>
+
+</html>
